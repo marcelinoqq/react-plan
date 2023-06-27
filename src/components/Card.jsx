@@ -76,7 +76,7 @@ const Card = ({ onCardSelect, isToggled }) => {
               {card.icon}
             </div>
             <div
-              className={`flex-grow ml-[20px] w-10 lg:text-2xl font-black ${
+              className={`flex-grow ml-[20px] max-w-[162px] lg:text-2xl font-black ${
                 !isToggled ? "text-gray-700" : "text-[#0C2461]"
               } ${selectedCard === card.id && isToggled ? "text-white" : ""}`}
             >

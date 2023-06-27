@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <>
-      <div className="lg:mx-80">
+      <div className="xl:mx-80 lg:mx-10">
         <Header />
         <div className="mt-[40px]">
           <Toggle handleToggle={handleToggle} />
