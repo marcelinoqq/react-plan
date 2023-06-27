@@ -7,7 +7,7 @@ const Toggle = ({ handleToggle }) => {
 
   return (
     <>
-      <label className="relative inline-flex items-center cursor-pointer">
+      <label className="relative inline-flex items-center cursor-pointer mx-[5px]">
         <input
           type="checkbox"
           className="sr-only peer"

@@ -10,6 +10,18 @@ const Card = ({ onCardSelect, isToggled }) => {
     }
   }, [isToggled]);
 
+  const handleCardClick = (id, plan) => {
+    if (isToggled) {
+      if (selectedCard === id) {
+        setSelectedCard(null);
+        onCardSelect(null, null);
+      } else {
+        setSelectedCard(id);
+        onCardSelect(id, plan);
+      }
+    }
+  };
+
   const cardDetails = [
     {
       id: 1,
@@ -41,25 +53,13 @@ const Card = ({ onCardSelect, isToggled }) => {
     },
   ];
 
-  const handleCardClick = (id, plan) => {
-    if (isToggled) {
-      if (selectedCard === id) {
-        setSelectedCard(null);
-        onCardSelect(null, null);
-      } else {
-        setSelectedCard(id);
-        onCardSelect(id, plan);
-      }
-    }
-  };
-
   return (
     <>
-      <div className="lg:mr-[10px]">
+      <div className="lg:mr-[10px] mx-[5px]">
         {cardDetails.map((card) => (
           <div
             key={card.plan}
-            className={`flex flex-row w-full p-6 mt-[20px] border rounded-2xl shadow 
+            className={`flex flex-row p-6 mt-[20px] border rounded-2xl shadow 
             ${selectedCard === card.id ? "bg-[#16a085]" : "bg-white"}
             ${
               isToggled

@@ -11,7 +11,7 @@ const Table = ({ selectedCardName, selectedCardId }) => {
   ];
 
   return (
-    <div className="lg:ml-[10px]">
+    <div className="lg:ml-[10px] mx-[5px]">
       <div className="h-[385px] mt-[20px] shadow border border-[#16a085] rounded-2xl">
         <div className="flex h-1/5 bg-[#16a085] shadow rounded-t-2xl">
           <div className="w-1/2 my-auto text-white ml-[60px]">Details</div>
@@ -31,7 +31,9 @@ const Table = ({ selectedCardName, selectedCardId }) => {
           >
             <div>
               <div className={`flex mt-[20px]`} key={item.id}>
-                <div className={`w-1/2 ml-[60px] font-bold`}>
+                <div
+                  className={`w-1/2 ml-[60px] font-bold text-sm lg:text-base`}
+                >
                   {item.feature}
                 </div>
                 <div className={`w-1/2 flex justify-center`}>{item.icon}</div>
